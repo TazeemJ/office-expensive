@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const page = () => {
+const Page = () => {
   const success = () => {
     toast.dark(
       <span>
@@ -513,4 +513,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
