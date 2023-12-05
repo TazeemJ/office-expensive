@@ -2,26 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.Toastify__progress-bar-theme--dark {
+  background: rgb(5, 192, 5) !important ;
+}
+.displayactive {
+  opacity: 1;
+  height: auto; /* Adjust as needed */
+  transition: opacity 0.4s, height 0.4s, top 0.4s;
+  position: absolute;
+  top: 0%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.displaynone {
+  opacity: 0;
+  height: 0; /* Or set to a fixed value */
+  overflow: hidden;
+  transition: opacity 0.4s, height 0.4s, top 0.4s;
+  position: absolute;
+  top: -10%;
+}
+label {
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 2px;
+}
+textarea {
+  height: 100px;
 }
 
+.navbar-brand {
+  margin-left: 50px;
+  font-weight: bold;
+}
+.search-container {
+  align-items: center;
+}
+.search-container input {
+  border: 1px solid rgb(196, 187, 187) !important;
+  outline: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+.search-container input:focus {
+  border: none;
+  outline: none;
+}
+#search {
+  font-weight: 800 !important;
+  margin-right: 10px;
+  background: black;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#search:hover {
+  font-weight: 800 !important;
+  background: black;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+#edi {
+  color: #3498db;
+}
+#del {
+  color: #e74c3c;
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  position: relative;
+}
+
+.formshow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.328);
+  top: 0;
+  width: 100%;
+}
+form {
+  border-radius: 10px;
+  background: white;
+}
+#close {
+  cursor: pointer;
+}
+#del {
+  cursor: pointer;
+}
+#edi {
+  cursor: pointer;
+}
+
+.btnactive {
+  background: #bb2d3b !important;
+}
+
+.search-container button {
+  background-color: black;
+}
+.search-container button:hover {
+  background-color: black;
+}
+.search-container button:hover {
+  background-color: black;
 }
